@@ -9,7 +9,15 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                "source-sans-pro": ["Source Sans Pro", "sans-serif"],
+                "open-sans": ["Open Sans", "sans-serif"],
+                raleway: ["Raleway", "sans-serif"],
+                roboto: ["Roboto", "sans-serif"],
+                poppins: ["Poppins", "sans-serif"],
+            },
+        },
     },
     plugins: [],
 };
