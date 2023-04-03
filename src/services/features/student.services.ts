@@ -17,13 +17,10 @@ export interface IStudent {
 }
 
 export const studentsServices = {
-    getAll({payload}: IHttpRequest) {
+    getAll({ url, payload }: IHttpRequest) {
         return httpRequest.get<IStudent[]>({
-            url: 'https://6400042d29deaba5cb2e6d91.mockapi.io/students',
-            payload: {
-                page: 1,
-                limit: 10
-            }
+            url,
+            payload
         });
     },
 }
