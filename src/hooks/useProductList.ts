@@ -15,6 +15,6 @@ export const useProductList = () => {
         headers: {
             value: 123,
             def: 123213123
-        },
+        }
     }, productServices.getAll)
 }
