@@ -1,4 +1,4 @@
-import { IHttpRequest } from "@/models";
+import { IBaseSearch, IHttpRequest } from "@/models";
 import httpRequest from "../core/httpRequest";
 
 export interface IStudent {
@@ -17,9 +17,9 @@ export interface IStudent {
 }
 
 export const studentsServices = {
-    getAll({ url, payload }: IHttpRequest) {
+    getAll({ payload }: IHttpRequest<IBaseSearch>) {
         return httpRequest.get<IStudent[]>({
-            url,
+            url: "https://6400042d29deaba5cb2e6d91.mockapi.io/students",
             payload
         });
     },
